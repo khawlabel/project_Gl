@@ -1,0 +1,98 @@
+
+    
+     
+
+
+
+import React from 'react'
+import { useState,useEffect} from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import Split from 'react-split'
+const url_base='http://127.0.0.1:8000/'
+
+const txt = () => {
+     const src=useParams()
+     console.log(src)
+     const title=src['title']
+     const description=src['description'];
+     console.log(title)
+     console.log(description)
+     const [annonces,setannonces]=useState([])
+     useEffect(()=>{
+     try{
+          axios.get(url_base+'search/'+title+'/'+description+'/')
+          .then(resp=> {
+            setannonces(resp.data.liste);
+            console.log(resp.data.liste);
+        })
+      }
+      catch(error){
+           console.log(error)
+          };
+     },[])
+  return (
+   <>
+{annonces && annonces.map((element1,index1) => 
+<div><h1>annonces selon :</h1>
+                      {element1 && element1.map((element2,index2)  => 
+                                              
+     <div key={element2.id}>
+     <h2>{element2.theme}</h2>
+     <h2>{element2.tarif}</h2>
+     <h2>{element2.description}</h2>
+       <h3>update</h3>
+   </div>           
+    )}
+      </div>                   
+                    )}
+   </>
+  )
+}
+
+
+
+
+
+ 
+
+  
+
+
+
+<nav className="navbar navbar-expand-lg navbar-light bg-light">
+<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <span className="navbar-toggler-icon"></span>
+</button>
+<Link className="navbar-brand" href="#">Logo</Link>
+
+<div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+  <ul className="navbar-nav mr-auto mt-2 mt-lg-0"/>
+    <li className="nav-item active">
+      <Link className="nav-link" to="/">Home</Link>
+    </li>
+    <li className="nav-item">
+      <Link className="nav-link" to="/about">About</Link>
+    </li>
+    <li className="nav-item">
+      <Link className="nav-link" to="/publier">Publier</Link>
+    </li>
+    
+    {userloginstatus==='true' &&<>
+    <li className="nav-item active"><Link className="nav-link" to="/logout">Logout</Link></li> 
+     <li className="nav-item active"><Link className="nav-link" to="/dashboard">Dashboard</Link></li>
+     </>
+     }
+    { userloginstatus===null &&<>
+   <li className="nav-item active"><Link className="nav-link" to="/register">Register</Link></li>
+  <li li className="nav-item active"><Link className="nav-link" to="/login">Login</Link></li>
+  </>
+   }
+  <form className="form-inline my-2 my-lg-0">
+    <input type="search"  name="theme" className="form-control mr-sm-2"  id="theme"  placeholder="Enter theme"/>
+   <input type="search"     name="description" className="form-control mr-sm-2"  id="theme"  placeholder="Enter description"/>
+ <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+</nav>

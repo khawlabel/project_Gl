@@ -1,0 +1,36 @@
+
+.verify-container{
+    background-color: rgb(241, 236, 236);
+    color: #000;
+    height: 160px;
+    width: 340px;
+    padding: 28px;
+    margin: 22% auto;
+    border-radius: 5%;
+    text-align: center;
+    font-size: medium;
+    box-shadow: 0px 0px 124px 11px rgba(0, 0, 0, 0.3);
+  }
+  
+  .verify-container .verify-link button{
+    background: #f1ebdb;
+    color: #fd702f;
+    margin-top: 30px;
+    width: 90px ;
+    height: 45px;
+    padding: auto 10px ;
+    border-radius: 10px;
+   
+    
+  }
+  
+  .verify-container .verify-link a{
+    color: #ccc;
+    font-weight: bold;
+  }
+  
+  .verify-container .verify-link button:hover{
+    background-color: #fd702f;
+    color:#000;
+  }
+  

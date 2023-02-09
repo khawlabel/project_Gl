@@ -1,0 +1,53 @@
+
+  .cont{
+    margin-top:170px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border-color: rgba(132, 148, 138, 0.863);
+  }
+  
+  .profile-button {
+    background: #f1ebdb;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .profile-button:hover {
+    background: var(--red);
+  }
+  
+  .profile-button:focus {
+    background: var(--red);
+    box-shadow: none;
+  }
+  
+  .profile-button:active {
+    background: var(--red);
+    box-shadow: none;
+  }
+  
+  .back a h6{
+    font-weight: bold;
+    color: rgb(109, 106, 106);
+    font-family: fantasy;
+  }
+
+  .back:hover,.back a:hover,.back a h6:hover {
+    color: var(--red);
+    cursor: pointer;
+    text-decoration: none;
+    
+  }
+
+  .textEdit{
+    font-weight: bold;
+    color: rgb(109, 106, 106);
+  }
+
+  .row input:hover{
+    border-color: black;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }

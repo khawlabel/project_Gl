@@ -1,0 +1,5 @@
+export {default as Home} from './Home/Home'
+export {default as Search} from './Search/Search'
+export {default as Publier} from './Publier/Publier'
+export {default as Form} from './Form/Form'
+export {default as Detail} from './Detail/Detail'

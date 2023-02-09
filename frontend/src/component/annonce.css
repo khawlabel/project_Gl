@@ -1,0 +1,165 @@
+.container5{
+    height:500px;
+    width: auto;
+    background-color: #f5eeeb;
+    padding: 90px 30px;
+}
+
+.image-annonce{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.text{
+    width:600px
+}
+
+.text h1{
+    font-size: 40px;
+}
+
+.text p{
+    font-size: 15px;
+    color: rgb(90, 88, 88);
+}
+
+.text p span {
+    font-size: 18px;
+    color: rgb(63, 56, 52);
+    font-weight: bold;
+}
+
+.text p a {
+    font-size: 18px;
+    color: rgb(158, 61, 4);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text p a:hover {
+   color: orangered;
+}
+
+@media screen and (max-width:1260px) {
+    .text{
+        width:500px
+    }
+    .image-annonce{
+        width: 350px;
+        height: 300px;
+        
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .text{
+        width:440px
+    }
+    .image-annonce{
+        width: 350px;
+        height: 300px;
+        
+    }
+}
+
+
+@media screen and (max-width:1050px) {
+    .text{
+        width:300px
+    }
+    .image-annonce{
+        width: 350px;
+        height: 300px;
+        
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    .text{
+        width:200px
+    }
+    .image-annonce{
+        width: 350px;
+        height: 300px;
+        
+    }
+    .container5{
+        height:auto;
+        width: auto;
+       
+    }
+    
+}
+
+
+@media screen and (max-width:660px) {
+    .text{
+        width:200px
+    }
+    .image-annonce{
+        width: 250px;
+        height: 300px;
+        
+    }
+    .container5{
+        height:auto;
+        width: auto;
+       
+    }
+    
+}
+
+
+@media screen and (max-width:500px) {
+    .text{
+        width:200px
+    }
+    .image-annonce{
+        width: 200px;
+        height: 300px;
+        
+    }
+    .container5{
+        height:auto;
+        width: auto;
+       
+    }
+    
+}
+
+@media screen and (max-width:560px) {
+    .text{
+        width:200px
+    }
+    .image-annonce{
+        width: 190px;
+        height: 300px;
+        
+    }
+    .container5{
+        height:auto;
+        width: auto;
+       
+    }
+    
+}
+
+
+@media screen and (max-width:400px) {
+    .text{
+        width:130px
+    }
+    .image-annonce{
+        width: 100px;
+        height: 200px;
+        
+    }
+    .container5{
+        height:auto;
+        width: auto;
+       
+    }
+    
+}
